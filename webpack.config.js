@@ -17,6 +17,9 @@ module.exports = env => {
             rules: [{
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
+                options: {
+                    transpileOnly: process.env.JS_ONLY === 'true',
+                }
             }, {
                 test: /\.css$/,
                 use: [

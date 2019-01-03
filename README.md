@@ -37,6 +37,13 @@ The Cookie Clicker consists of 4 major components:
 2. `npm start` to run the webpack-dev-server and open the application
     - `npm run start:no-sagas` to run the "no sagas" implementation
 
+### Running without TypeScript
+
+If you are unfamiliar with TypeScript, and would like to write plain ES6 to accomplish these tasks, you can do so
+by setting the `JS_ONLY` environment variable to `'true'` while running the app (e.g., `JS_ONLY=true npm start`). The webpack
+config is set up to turn off the TypeScript type checker when this variable is set, allowing you to write ES6 without
+worrying about typing errors. Depending on your IDE, you may also need to configure it to disable TypeScript inspections.
+
 ## Tasks
 
 Each of these tasks can be implemented by only using the files located in `/redux/sagas`.
